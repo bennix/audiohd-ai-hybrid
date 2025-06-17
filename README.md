@@ -1,4 +1,239 @@
-# 🎵 AI+传统混合音频增强系统
+# 🎵 AI+Traditional Hybrid Audio Enhancement System | AI+传统混合音频增强系统
+
+**English** | [中文](#中文版本)
+
+---
+
+## 🌟 English Version
+
+An advanced audio enhancement solution that combines **Artificial Intelligence Deep Learning** and **Traditional Signal Processing** to provide optimal audio quality improvement for your files.
+
+### ✨ Core Features
+
+#### 🤖 AI-Powered Enhancement
+- **Facebook Denoiser**: Real-time speech denoising model developed by Meta
+- **SpeechBrain Enhancement**: Advanced speech enhancement deep learning model  
+- **RNNoise**: Lightweight RNN real-time denoising model
+- **Automatic Model Management**: On-demand downloading and loading of AI models
+
+#### 🔧 Traditional Signal Processing
+- **Adaptive Denoising**: STFT-based frequency domain noise suppression
+- **Harmonic Enhancement**: HPSS separation and frequency domain enhancement
+- **Dynamic Range Optimization**: Multi-band compression and dynamic processing
+- **Stereo Width Enhancement**: Mid/Side technique for soundstage expansion
+
+#### 🔀 Hybrid Processing Modes
+1. **Traditional Only** - Reliable classic algorithms
+2. **AI Only** - Pure deep learning enhancement
+3. **AI-First Hybrid** - AI processing → Traditional fine-tuning
+4. **Traditional-First Hybrid** - Traditional processing → AI enhancement
+5. **Parallel Hybrid** - Simultaneous processing with proportional mixing
+6. **Adaptive Hybrid** - Intelligent audio feature analysis for automatic strategy selection
+
+#### 🎛️ Complete Custom Control
+- **AI Processing Toggle**: Users have full control over AI model usage
+- **AI Model Selection**: Free choice of any AI model
+- **Flexible Combinations**: All audio qualities can use any AI model and processing mode
+- **Smart Recommendations**: System provides suggestions while users maintain full control
+
+### 🚀 Quick Start
+
+#### System Requirements
+- Python 3.8+
+- Recommended 8GB+ RAM
+- GPU optional (CUDA support for AI acceleration)
+
+#### Installation Steps
+
+1. **Clone Repository**
+```bash
+git clone https://github.com/bennix/audiohd-ai-hybrid.git
+cd audiohd-ai-hybrid
+```
+
+2. **Install Dependencies**
+```bash
+pip install -r requirements.txt
+```
+
+3. **Launch System**
+
+**Linux/Mac:**
+```bash
+chmod +x run_hybrid_demo.sh
+./run_hybrid_demo.sh
+```
+
+**Windows:**
+```cmd
+run_hybrid_demo.bat
+```
+
+4. **Access Interface**
+Open browser and visit: http://localhost:7860
+
+### 🎯 Usage Guide
+
+#### Recommended Configuration Combinations
+
+| Audio Type | AI Processing | Recommended Mode | AI Model | Traditional Level | Mix Ratio | Use Cases |
+|-----------|---------------|------------------|----------|------------------|-----------|-----------|
+| 🎤 Speech Recording | ✅ | Adaptive Hybrid | Facebook Denoiser | Medium | - | Podcasts, interviews, voice notes |
+| 🎵 Music Files | ✅ | Parallel Hybrid | SpeechBrain | Medium | 0.6 | Pop music, vintage restoration |
+| 📻 Low Quality Audio | ✅ | AI-First Hybrid | RNNoise | Advanced | - | Phone recordings, compressed audio |
+| 🎧 High Quality Audio | 🔄 | Traditional-First Hybrid | SpeechBrain | Basic | - | CD quality, professional recordings |
+| 🎼 Professional Audio | 🔄 | Parallel Hybrid | Facebook Denoiser | Advanced | 0.3 | Studio work, mastering |
+| 🗣️ Meeting Recording | ✅ | Adaptive Hybrid | RNNoise | Medium | - | Remote meetings, multi-speaker |
+| 🎙️ Live Recording | ✅ | AI-First Hybrid | Facebook Denoiser | Medium | - | Game streaming, online teaching |
+| 🎶 Classical Music | 🔄 | Traditional-First Hybrid | SpeechBrain | Basic | - | Symphony, chamber music |
+
+**Legend**: ✅=Recommended AI enabled, 🔄=Optional AI enabled, -=Adaptive decision
+
+#### Parameter Details
+
+**🤖 AI Processing Control:**
+- **Enable Toggle**: Complete control over AI model usage, traditional-only when disabled
+- **Model Selection**: Each AI model has unique characteristics and use cases
+- **Preloading**: Pre-load AI models for improved processing speed
+
+**🔄 Processing Modes:**
+- **Adaptive Hybrid**: System automatically analyzes audio features for optimal strategy
+- **Parallel Hybrid**: AI and traditional process simultaneously, results mixed proportionally
+- **Sequential Hybrid**: Two methods applied consecutively for mutual enhancement
+- **Single Mode**: AI-only or traditional-only processing
+
+**🤖 AI Model Characteristics:**
+- **Facebook Denoiser**: Professional speech denoising, excellent for vocal content
+- **SpeechBrain**: Balanced speech enhancement, versatile for various audio types
+- **RNNoise**: Lightweight real-time denoising, low resource usage, fast processing
+
+**🔧 Traditional Enhancement Levels:**
+- **Basic**: Adaptive denoising only, suitable for light enhancement
+- **Medium**: Denoising + harmonic enhancement, balanced effect and speed
+- **Advanced**: Full processing (denoising+harmonic+dynamic+stereo), best results
+
+### 📊 Technical Architecture
+
+```
+Input Audio
+    ↓
+Audio Feature Analysis
+    ↓
+User Control Selection
+    ↓
+┌─────────────────┬─────────────────┐
+│   AI Branch      │ Traditional Branch│
+│ (Optional Enable)│  (Always Available)│
+│                 │                 │
+│ • Facebook      │ • Adaptive      │
+│   Denoiser      │   Denoising     │
+│ • SpeechBrain   │ • Harmonic      │
+│ • RNNoise       │   Enhancement   │
+│                 │ • Dynamic       │
+│                 │   Processing    │
+│                 │ • Stereo        │
+│                 │   Enhancement   │
+└─────────────────┴─────────────────┘
+    ↓
+Hybrid Strategy Processing
+    ↓
+Quality Check & Normalization
+    ↓
+Enhanced Audio Output
+```
+
+### 🧠 Intelligent Features
+
+#### Complete User Control
+- **AI Toggle**: User decides whether to enable AI processing
+- **Model Selection**: Free choice of any AI model
+- **Mode Selection**: All audio qualities support any processing mode
+- **Parameter Adjustment**: Flexible control of mix ratios and enhancement levels
+
+#### Adaptive Processing Decision
+System automatically analyzes audio:
+- **Noise Level** - Select appropriate denoising strategy
+- **Dynamic Range** - Determine compression processing intensity
+- **Spectral Features** - Optimize frequency domain enhancement parameters
+- **Voice Activity** - Distinguish between speech and music content
+
+### 📈 Performance Metrics
+
+| Processing Mode | CPU Usage | Memory | Speed | Quality Improvement | Use Cases |
+|----------------|-----------|---------|--------|-------------------|-----------|
+| Traditional Only | Low | Low | Fast | Good | High-quality audio, fast processing |
+| AI Only | Medium-High | Medium | Medium | Excellent | Low-quality audio, professional enhancement |
+| Hybrid Mode | Medium | Medium | Medium-Fast | Best | General scenarios, optimal results |
+| Adaptive | Dynamic | Medium | Medium | Intelligent | Batch processing, automated mode |
+
+### 🔧 Advanced Configuration
+
+#### Environment Variables
+```bash
+# Set GPU device
+export CUDA_VISIBLE_DEVICES=0
+
+# Set model cache directory
+export TRANSFORMERS_CACHE=/path/to/cache
+
+# Set parallel processing threads
+export OMP_NUM_THREADS=4
+```
+
+### 🐛 Troubleshooting
+
+#### Common Issues
+
+**Q: AI model loading failed?**
+A: Check network connection, ensure access to HuggingFace Hub. Set proxy or use offline models.
+
+**Q: GPU unavailable?**
+A: Check CUDA installation, run `python -c "import torch; print(torch.cuda.is_available())"`
+
+**Q: Processing results have noise?**  
+A: Try adjusting mix ratios or use different AI model combinations. For high-quality audio, reduce AI weight.
+
+**Q: Out of memory?**
+A: Close unused AI models or adjust processing chunk size.
+
+### 📝 Changelog
+
+#### v2.1.0 (Latest)
+- 🎛️ Added complete AI processing custom control
+- ✅ High-quality audio can now optionally use AI models
+- 🔄 Users can freely enable/disable AI processing
+- 📊 More detailed recommendation configuration table
+- 🎯 More flexible parameter control options
+
+#### v2.0.0
+- ✨ Added AI model support (Facebook Denoiser, SpeechBrain, RNNoise)
+- 🔀 Implemented six hybrid processing modes
+- 🧠 Added adaptive intelligent processing
+- 📊 Optimized audio feature analysis
+
+### 📞 Support & Contribution
+
+- **Bug Reports**: Submit via GitHub Issues
+- **Feature Requests**: Welcome to discuss new feature requirements
+- **Code Contributions**: Fork project and submit Pull Requests
+
+### 📄 License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details
+
+---
+
+<div align="center">
+
+**🎵 Give every audio the best quality it deserves!**
+
+[⭐ Star Project](https://github.com/bennix/audiohd-ai-hybrid) | [🐛 Report Issue](https://github.com/bennix/audiohd-ai-hybrid/issues) | [💡 Feature Request](https://github.com/bennix/audiohd-ai-hybrid/issues)
+
+</div>
+
+---
+
+## 中文版本
 
 一个结合**人工智能深度学习**和**传统信号处理**的高级音频增强解决方案，为您的音频提供最佳的质量提升效果。
 
